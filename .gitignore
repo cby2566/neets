@@ -1,0 +1,12 @@
+﻿#过滤文件夹
+node_modules/
+dist/
+/exam/
+
+
+#过滤文件
+*.mp3
+*.mp4
+*.rm
+*.wav
+*.avi

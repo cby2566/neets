@@ -29,10 +29,18 @@ module.exports ={
 				use:{
 					loader:'babel-loader',
 					options:{
-						presets:['env']
+						presets:['env','stage-3']
 					}
 				}
-			}
+			},
+			{
+                test:/\.css$/,
+                loader:['style-loader','css-loader']
+			},
+			{
+                test:/\.scss$/,
+                loader:['style-loader','css-loader','sass-loader']
+            }
 		]
 	},
 	//虚拟服务器

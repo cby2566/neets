@@ -1,41 +1,24 @@
 <template>
     <div>
         测试组件{{data}}
-        <p @click="fun1">跳转</p>
-        <p>
-        <!-- 使用 router-link 组件来导航. -->
-        <!-- 通过传入 `to` 属性指定链接. -->
-        <!-- <router-link> 默认会被渲染成一个 `<a>` 标签 -->
-        <router-link to="/foo">Go to Foo</router-link>
-        <router-link to="/bar">Go to Bar</router-link>
-      </p>
-      <!-- 路由出口 -->
-      <!-- 路由匹配到的组件将渲染在这里 -->
-      <router-view></router-view>
+        <ul class="ulx">
+            <li v-for="item in path"><router-link :to="item" tag="span" active-class="act">{{item}}</router-link></li>
+        </ul>
+        <icon name="home" :w="20" :h="20"></icon>
+        <router-view />
     </div>
 </template>
 
 <script>
-import VueRouter from 'vue-router';
+
 import Vue from 'vue';
-
-Vue.use(VueRouter);
-
-const Foo = { template: '<div>foo</div>' }
-const Bar = { template: '<div>bar</div>' }
-const routes = [
-  { path: '/foo', component: Foo },
-  { path: '/bar', component: Bar }];
-
-const router = new VueRouter({
-    routes // (缩写) 相当于 routes: routes
-});
+import {pathIndex} from './util/routes.js';
 
 
 
 export default {
     data(){
-        return {data:'+数据'}
+        return {data:'+数据',path:pathIndex}
     },
     methods:{
         fun1(){
@@ -47,3 +30,12 @@ export default {
     }
 }
 </script>
+<style lang="scss">
+.ulx{
+    color:rebeccapurple;
+}
+.act{
+    color:red;
+    font-weight: bold;
+}
+</style>

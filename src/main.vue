@@ -5,7 +5,11 @@
             <li v-for="item in path"><router-link :to="item" tag="span" active-class="act">{{item}}</router-link></li>
         </ul>
         <icon name="home" :w="20" :h="20"></icon>
-        <router-view />
+        <img src="./assets/img/head.jpg" alt="">
+        <transition name="data">
+            <router-view />
+        </transition>
+       
     </div>
 </template>
 
@@ -37,5 +41,15 @@ export default {
 .act{
     color:red;
     font-weight: bold;
+}
+
+.data-enter-active, .data-leave-active {
+  transition: all 0.5s;
+  position: relative;
+  top:-18px;
+}
+.data-enter, .data-leave-to{
+  opacity: 0;
+  top:-120px;
 }
 </style>

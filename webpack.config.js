@@ -40,6 +40,19 @@ module.exports ={
 			{
                 test:/\.scss$/,
                 loader:['style-loader','css-loader','sass-loader']
+			},
+			{
+                test:/\.(jpe?g|png|gif|bmp)$/,
+                use:{
+                    loader:'url-loader',
+                    options:{
+                        // 设置转换base64编码的临界值
+                        limit:1000,
+                        name:'img/[name].[hash:7].[ext]',
+                        // outputPath: './assets',
+                        // publicPath: '/img'
+                    }
+                }
             }
 		]
 	},

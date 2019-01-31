@@ -1,15 +1,13 @@
 <template>
     <div>
-        测试组件{{data}}
-        <ul class="ulx">
-            <li v-for="item in path"><router-link :to="item" tag="span" active-class="act">{{item}}</router-link></li>
-        </ul>
-        <icon name="home" :w="20" :h="20"></icon>
-        <img src="./assets/img/head.jpg" alt="">
+        <div class="div1"></div>
         <transition name="data">
             <router-view />
         </transition>
-       
+        <ul class="ulx">
+            <li v-for="item in path"><router-link :to="item" tag="span" active-class="act">{{item}}</router-link></li>
+        </ul>
+        <span>123</span>
     </div>
 </template>
 
@@ -46,10 +44,20 @@ export default {
 .data-enter-active, .data-leave-active {
   transition: all 0.5s;
   position: relative;
-  top:-18px;
+  left:-18px;
+  
 }
 .data-enter, .data-leave-to{
   opacity: 0;
-  top:-120px;
+  left:-120px;
+}
+span{
+    font-size: 14px;
+}
+
+.div1{
+ height: 1.0666666666666666666666666666667rem;
+ width: 100%;
+ background: #ffde02;
 }
 </style>

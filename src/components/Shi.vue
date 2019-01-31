@@ -1,6 +1,7 @@
 <template>
     <div>
         测试组件{{a}}
+        <icon name="home" :w="20" :h="20"></icon>
     </div>
 </template>
 

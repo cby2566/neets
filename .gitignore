@@ -1,6 +1,7 @@
 ﻿#过滤文件夹
 node_modules/
 dist/
+vscode/
 /exam/
 
 

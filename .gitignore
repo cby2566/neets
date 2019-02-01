@@ -1,12 +1,14 @@
-﻿#过滤文件夹
+.DS_Store
 node_modules/
-dist/
-/exam/
+/dist/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
 
-
-#过滤文件
-*.mp3
-*.mp4
-*.rm
-*.wav
-*.avi
+# Editor directories and files
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln

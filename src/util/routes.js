@@ -7,10 +7,10 @@ import isMe from '../components/wo/isMe.vue';
 
 
 const routes=[
-    {path:'/home',component:home},
-    {path:'/classify',component:classify},
-    {path:'/subscribe',component:subscribe},
-    {path:'/isMe',component:isMe},
+    {name:'home',path:'/home',component:home},
+    {name:'classify',path:'/classify',component:classify},
+    {name:'subscribe',path:'/subscribe',component:subscribe},
+    {name:'isMe',path:'/isMe',component:isMe},
     {path:'/',redirect:to=>'/home'}
 ];
 //把组件的path存起来

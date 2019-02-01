@@ -5,6 +5,9 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const { VueLoaderPlugin } = require('vue-loader');
 
+
+
+
 module.exports ={
 	//配置入口、出口
 	entry:{
@@ -69,5 +72,8 @@ module.exports ={
 	//插件配置
 	plugins:[ 
 	new HtmlWebpackPlugin({template:'./src/home.html'}),
-	new VueLoaderPlugin()]
+	new VueLoaderPlugin(),
+		//vw移动端适配
+	
+	]
 }

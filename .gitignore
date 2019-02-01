@@ -1,16 +1,12 @@
 .DS_Store
 node_modules/
-<<<<<<< HEAD
 dist/
 vscode/
 /exam/
-=======
-/dist/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
->>>>>>> cby
-
+package-lock.json
 # Editor directories and files
 .idea
 .vscode

@@ -1,5 +1,6 @@
 
 import React from 'react';
+import './list.css';
 class LsComp extends React.Component {
     
     constructor(props) {
@@ -27,6 +28,28 @@ class LsComp extends React.Component {
                 <h2 onClick={this.upName.bind(this)}>{ this.props.userInfo.name}</h2>
                 <h2>现在是 {this.state.date.toLocaleTimeString()}.</h2>
                 <HelloMessage names={this.state.date}/>
+                <div className="div1">
+                    <div className="flex-div">
+                        <div className="item1">
+                            123
+                        </div>
+                        <div className="item1">
+                            123
+                        </div>
+                        <div className="item1">
+                            123
+                        </div>
+                        <div className="item1">
+                            123
+                        </div>
+                        <div className="item1">
+                            123
+                        </div>
+                        <div className="item1">
+                            123
+                        </div>
+                    </div>
+                </div>
             </div>
         )
     }
